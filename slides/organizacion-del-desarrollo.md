@@ -171,7 +171,7 @@ trabajo grupal.
 * Diseñado específicamente para el lanzamiento de releases.
 * Asigna roles a las diferentes ramas y define cómo y cuándo deben
   interactuar dichas ramas. 
-  * Utiliza ramas específicas para preparar, mantener y generar nuevos releases.
+	* Utiliza ramas específicas para preparar, mantener y generar nuevos releases.
 * Existe un [conjunto de extensiones para trabajar con git
   flow](https://github.com/petervanderdoes/gitflow-avh).
 
@@ -194,7 +194,7 @@ trabajo grupal.
 
 ## Git Flow: incializando
 
-[![asciicast](https://asciinema.org/a/236238.png)](https://asciinema.org/a/236238?autoplay=1&speed=2&size=medium)
+[![asciicast](https://asciinema.org/a/236238.png)](https://asciinema.org/a/236238?autoplay=1&speed=2&size=medium)<!-- .element: class="asciinema" -->
 
 ---
 
@@ -202,44 +202,59 @@ trabajo grupal.
 
 * Cada nueva funcionalidad debe desarrollarse en su propia rama.
 * En vez de crearse a partir de **master**, lo hacen a partir de **develop**.
-  * _Se espera que develop esté lo más actualizado posible_.
+	* _Se espera que develop esté lo más actualizado posible_.
 * Los features branches nunca deben interactuar con **master**.
 * Al finalizar un feature branch, se mergea con **develop**.
+
 ---
+
 ## Git Flow: Features branches
+
 ![Git flow features](images/git-flows/git-flow-02.svg)
+
 ---
+
 ## Git Flow: Features branches
 
-[![asciicast](https://asciinema.org/a/236239.png)](https://asciinema.org/a/236239?speed=2&autoplay=1&size=medium)
+[![asciicast](https://asciinema.org/a/236239.png)](https://asciinema.org/a/236239?speed=2&autoplay=1&size=medium)<!-- .element: class="asciinema" -->
 
 ---
+
 ## Git Flow: Release branches
 
 * Se crean cuando la rama **develop** acumuló varios features o
   porque se aproxima la fecha de lanzar un release.
 * Se crea una rama **release** desde **develop**.
 * En la rama no se agregan nuevas fucionalidades, sólo admiten:
-  * Solución a errores: bugfix.
-  * Generación de documentación, Changelog, etc.
-  * Correr version bumping scripts.
+	* Solución a errores: bugfix.
+	* Generación de documentación, Changelog, etc.
+	* Correr version bumping scripts.
+
+---
+
+## Git Flow: Release branches
+
 * Una vez lista para empaquetarse, se procede a:
-  * Mergear la rama con **master**.
-  * Crear un **tag** en master que refleje la nueva versión.
-  * Mergear la rama con **develop**.
-      * _Pudo haber avanzado durante la creación del release_.
+	* Mergear la rama con **master**.
+	* Crear un **tag** en master que refleje la nueva versión.
+	* Mergear la rama con **develop**.
+		* _Pudo haber avanzado durante la creación del release_.
 
 ---
-## Git Flow: Release branches
-![Git flow releases](images/git-flows/git-flow-03.svg)
 
----
 ## Git Flow: Release branches
 
-
-[![asciicast](https://asciinema.org/a/236240.png)](https://asciinema.org/a/236240?speed=2&autoplay=1&size=medium)
+![Git flow releases](images/git-flows/git-flow-03.svg)<!-- .element: height="500px" -->
 
 ---
+
+## Git Flow: Release branches
+
+
+[![asciicast](https://asciinema.org/a/236240.png)](https://asciinema.org/a/236240?speed=2&autoplay=1&size=medium) <!-- .element: class="asciinema" -->
+
+---
+
 ## Git Flow: Hotfix branches
 
 * Se utilizan para solucionar problemas en releases de producción.
@@ -248,29 +263,35 @@ trabajo grupal.
 * Son las únicas ramas que nacen de **master**.
 * Cuando se arriba a una solución del problema, se deben mergear con **master** y
   **develop** (o si existe una **release branch**):
-  * Además se debe crear un nuevo **tag en master** con un número de versión
+	* Además se debe crear un nuevo **tag en master** con un número de versión
     actualizado.
+
 ---
+
 ## Git Flow: Hotfix branches
 
-<img src="images/git-flows/git-flow-04.svg" alt="Git flow hotfix" height="550px">
+![Git flow releases](images/git-flows/git-flow-04.svg)<!-- .element: height="500px" -->
 
 ---
+
 ## Git Flow: Hotfix branches
 
-[![asciicast](https://asciinema.org/a/236354.png)](https://asciinema.org/a/236354?speed=2&autoplay=1&size=medium)
+[![asciicast](https://asciinema.org/a/236354.png)](https://asciinema.org/a/236354?speed=2&autoplay=1&size=medium) <!-- .element: class="asciinema" -->
+
 ---
+
 ## Los problemas de Git Flow
 
 * Usa como rama por defecto **develop**, mientras que muchas herramientas asumen
   que es **master** tal rama. Tener que cambiar esto, se vuelve molesto.
-* La complejidad introducida por los flujos de las ramas release y hotfix:
-  * Si bien parecen una buena idea, son complejos.
-  * Al implementar CD, la rama principal puede desplegarse. O sea que las ramas
-    hotfix y release podrían omitirse, ahorrándose así  la ceremonia que implica
-    hacer un merge de múltiples ramas.
+* Complejidad introducida por las ramas release y hotfix:
+	* Si bien parecen una buena idea, son complejos.
+	* Al implementar CD, la rama principal puede desplegarse. O sea que las ramas
+    hotfix y release podrían omitirse ahorrando merges en múltiples ramas.
 * No aplica a proyectos que deben dar soporte a múltiples versiones.
+
 ---
+
 ## GitHub Flow
 
 [GitHub propone un flujo liviano y basado en ramas](https://guides.github.com/introduction/flow/index.html)
@@ -282,6 +303,7 @@ El principal concepto introducido por GitHub es el de **Pull Request**, cuya
 principal característica consiste en la posibilidad de realizar **code review**.
 
 ---
+
 ## GitLab Flow
 
 * GitLab propone varios flujos:
@@ -295,127 +317,164 @@ Requests** y que también permiten realizar **code review**.
 <small>
 GitLab con sus flujos promociona sus pipelines de CD
 </small>
+
 ---
+
 ## Gitlab: production branch
-![Gitlab production branch flow](images/git-flows/gitlab-flow-00.png)
+
+![Gitlab production branch flow](images/git-flows/gitlab-flow-00.png)<!-- .element: height="500px" -->
+
 ---
+
 ## Gitlab: production branch
 
 * Gitlab indica que con el flujo de GitHub se asume que es posible desplegar a
   producción cada vez que se mergea un **feature branch**.
 * En algunos proyectos esto no es posible. Por ejemplo:
-  * _Aplicaciones de iOS que deben ser validadas por App Store_.
-  * _Cuando existen ventanas de despliegue (por ejemplo de lunes a viernes de 10
+	* _Aplicaciones de iOS que deben ser validadas por App Store_.
+	* _Cuando existen ventanas de despliegue (por ejemplo de lunes a viernes de 10
     a 16hs cuando el personal de operaciones está completo) pero además se
     desean mergear cambios en otros momentos_.
+
 ---
+
 ## Gitlab: production branch
+
 * Mergear master en la rama **production** desplegará una nueva versión.
 * La rama production siempre tiene el código en producción.
 * El momento (fecha y hora) del despliegue queda autodocumentado en el merge
 * Se elimina el overhead de manejo de tags, versiones y merges común en git
   flow.
----
-## Gitlab: environment branches
-<img src="images/git-flows/gitlab-flow-01.png" alt="GitLab environment branches
-flow" height="550px">
 
 ---
-## Gitlab: environment branches
+
+### Gitlab: environment branches
+
+![Gitlab production branch flow](images/git-flows/gitlab-flow-01.png)<!-- .element: height="500px" -->
+
+---
+
+### Gitlab: environment branches
 
 * Cada vez que se actualiza la rama **master** automáticamente se actualiza un
   ambiente.
-  * Sólo en este caso, el nombre de la rama no coincide con el del ambiente.
+	* Sólo en este caso, el nombre de la rama no coincide con el del ambiente.
 * Cuando alguien desea desplegar en un ambiente, digamos **pre-production**, se
   debe crear un Merge Request desde la rama **master** a **pre-production**.
 * En este flujo los commits fluyen en un único sentido hacia producción, 
   asegurando que todo ha sido testeado en **cada uno de los ambientes**.
----
-## Gitlab: release branches
-
-<img src="images/git-flows/gitlab-flow-02.png" alt="GitLab release branches
-flow" height="550px">
 
 ---
+
+### Gitlab: release branches
+
+![Gitlab production branch flow](images/git-flows/gitlab-flow-02.png)<!-- .element: height="500px" -->
+
+---
+
 ## Gitlab: release branches
 
 * Sólo si se entregan versiones a diferentes clientes tiene sentido este flujo.
   Lo deben usar:
-  * Productos liberados
-  * Librerías
-  * Frameworks
+	* Productos liberados
+	* Librerías
+	* Frameworks
 * Cada rama contiene una **minor version** (2-3-stable, 2-4-stable, etc).
 * Las ramas **x-x-stable** utiliza **master** como base y debe crearse lo más
   tarde posible.
+
 ---
+
 ## Gitlab: release branches
+
 * Cuando se anuncia una una nueva rama **release**, únicamente se agregarán
   hotfixes en esta rama:
-  * _Si es posible los hotfixes primero se deben solucionar en master y luego
+	* _Si es posible los hotfixes primero se deben solucionar en master y luego
     cherry picked en el release branch_.
-  * Cada vez que se mergea un hotfix, se incrementa el **patch number**
+	* Cada vez que se mergea un hotfix, se incrementa el **patch number**
     (cumpliendo con semver) y crea un nuevo **tag**.
 * Algunos proyectos agregan una rama llamada **stable** que apunta al mismo
   commit del último **release branch**.
+
 ---
-## Tests: TDD (Test Driven Development)
+
+## Tests: TDD
 
 * Aplicar TDD es una práctica que se complementa muy bien con las metodologías
   ágiles:
-  * _El problema es que no aprendimos a desarrollar con TDD_.
-  * Promueve código de mayor calidad.
-  * Desarrollar los tests de unidad, funcionales e integración es responsabilidad del
+	* _El problema es no aprender a desarrollar con TDD_.
+	* Promueve código de mayor calidad.
+	* Desarrollar los tests de unidad, funcionales e integración es responsabilidad del
   desarrollador.
 * Análisis de cobertura:
-  * _La paranoia del 100%_.
+	* _La paranoia del 100%_.
+
 ---
-## Tests: BDD (Behavior Driven Development)
+
+## Tests: BDD
+
 * Conjunto de prácticas que intentan reducir algunas actividades de desperdicio
   propias en el desarrollo de software:
-  * Retrabajo causado por el malentendido o escasos requerimentos.
-  * Dudas técnicas causadas por la reticencia o desgano en refactorizar código.
-  * Ciclos lentos de feedback causados por silos o ceder demasiado.
+	* Retrabajo causado por el malentendido o escasos requerimentos.
+	* Dudas técnicas causadas por la reticencia o desgano en refactorizar código.
+	* Ciclos lentos de feedback causados por silos o ceder demasiado.
+
+---
+
+## Tests: BDD
+
 * BDD intenta achicar los gaps de comunicación entre los miembros del equipo,
   fomentando un mejor entendimiento del cliente y promoviendo comunicación
 continua mediante ejemplos reales.
+
 ---
-## Tests: BDD (Behavior Driven Development)
+
+## Tests: BDD
+
 _There are many reasons why software projects go wrong. A very common reason is that different people in the organisation or on the team have very different understandings of how the software should behave, and what problems it’s trying to solve._
 
 **_Ignorance is the single greatest impediment to throughput_**
 
 _Teams that deliberately seek to discover what they are ignorant about before
 development starts are more productive, because there is less rework._
+
 ---
-## Tests: BDD (Behavior Driven Development)
+
+## Tests: BDD
+
 * Aplicar BDD se complementa muy bien con TDD porque extiende una práctica de
   desarrollo con la de análisis:
-  * Utiliza un lenguaje natural que permite unir la parte técnica y la de
+	* Utiliza un lenguaje natural que permite unir la parte técnica y la de
     negocio mediante historias de usuario, acompañadas con criterios de
     aceptación en términos de escenarios.
-  * _Dado [contexto inicial], cuando [se produce el evento], entonces [resultados]_.
-  * Los criterios se escriben en una DSL llamada [Gherkin](https://docs.cucumber.io/gherkin/reference/).
-  * Productos: [Cucumber](https://cucumber.io/), [Behave](https://github.com/behave/behave).
+	* _Dado [contexto inicial], cuando [se produce el evento], entonces [resultados]_.
+	* Los criterios se escriben en una DSL llamada [Gherkin](https://docs.cucumber.io/gherkin/reference/).
+	* Productos: [Cucumber](https://cucumber.io/), [Behave](https://github.com/behave/behave).
+
 ---
+
 ## Tests: Acceptance Testing
 
 * Se realizan pruebas de caja negra de forma automatizada.
 * Hay diferentes herramientas para implementarlos:
-  * [Selenium](https://www.seleniumhq.org/)
-  * [Cypress](https://www.cypress.io/)
-  * [Capybara](https://github.com/teamcapybara/capybara)
-  * [Robot Framework](http://robotframework.org/)
+	* [Selenium](https://www.seleniumhq.org/)
+	* [Cypress](https://www.cypress.io/)
+	* [Capybara](https://github.com/teamcapybara/capybara)
+	* [Robot Framework](http://robotframework.org/)
 
 ---
-## Una confusión acerca de BDD/TDD
+
+### Una confusión acerca de BDD/TDD
 
 * Testear luego de escribir código no significa BDD ni TDD, porque los tests no
   dirigen la implementación.
 * Se cree que TDD/BDD son técnicas de test.
-  * **No lo son**
-  * TDD y BDD, como su nombre lo indica, son técnicas de desarrollo.
+	* **No lo son**
+	* TDD y BDD, como su nombre lo indica, son técnicas de desarrollo.
 * Automatizar los tests es producto de implementar TDD y BDD.
+
 ---
+
 ## Linting
 
 Muchas veces es importante además de testear el código, verificar que se
