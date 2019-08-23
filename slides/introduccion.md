@@ -31,7 +31,7 @@ Si soy desarrollador, ¿es necesario saber de qué se trata todo esto?
 
 ## Y...
 
-* Algunos terminos son muy parecidos entre sí
+* Algunos términos son muy parecidos entre sí
 * Algunas tecnologías reemplazan otras o se solapan en funcionalidades
 * ¿Y por qué siempre buscamos mejorar?
 	* Continuous Improvement
