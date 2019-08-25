@@ -65,26 +65,24 @@ pre-releases, metadatos producto de compilaciones, etc.
 
 ### Versionado semántico vs de fuentes
 
-* No deben confundirse los conceptos.
+* No deben confundirse los conceptos: usar una herramienta como Git no significa que se aplique semver.
 * Un proyecto con versionado de fuentes irá generando versiones semánticas:
 	* Que pueden reflejarse como un TAG.
-	* Que dispare la generación de un paquete con el release.
-	* Que inicie el proceso de generación de binarios para diferentes
-    arquitecturas, SO, etc y publique en un repositorio de binarios.
-* Usar una herramienta como Git no significa que se aplique semver.
+	* Que dispare la generación de un release.
+	* Que inicie la generación de binarios para diferentes
+    arquitecturas y publique en un repositorio de binarios.
 
 ---
 
 ## Semver como un anti patrón
 
-* En el siguiente [post](https://surfingthe.cloud/semantic-versioning-anti-pattern/)
-  se considera el uso de SemVer como un anti patrón
-* Es que en determinados desarrollos, generalmente aquellos que no deben
+* En determinados desarrollos, generalmente aquellos que no deben
   mantener muchas versiones, y que utilizan despliege/entrega continua podrían
-  verlo como una traba o demora.
+  verlo como una traba o demora. En este [post](https://surfingthe.cloud/semantic-versioning-anti-pattern/)
+  se considera el uso de SemVer como un anti patrón.
 * **No es el caso de librerías**, donde es fundamental para los gestores de
   bundles determinar qué librería es la más adecuada. Así es el caso de `npm,
-  budler, pip, composer, etc`.
+  bundler, pip, composer, etc`.
 
 ---
 
@@ -136,11 +134,8 @@ metódicos.
 	* Si el código desplegado requiere aplicar cambios en la BD, deberían
     aplicarse.
 	* Si ya se han aplicado, entonces no hacer nada.
-* Si bien hay herramientas que manejan estas cuestiones, el desarrollador debe
-  considerar:
-	* Evitar cambios destructivos.
-	* Considerar siempre la necesidad de un rollback.
-
+* Si bien hay herramientas que manejan esto, el desarrollador debe evitar cambios destructivos y considerar siempre la necesidad de un rollback.
+ 
 ---
 
 ### Versionado de la base de datos
@@ -261,8 +256,8 @@ trabajo grupal.
 * Son muy parecidas a las ramas **feature** y **release**, salvo que se basan en
   **master** en vez de **develop**.
 * Son las únicas ramas que nacen de **master**.
-* Cuando se arriba a una solución del problema, se deben mergear con **master** y
-  **develop** (o si existe una **release branch**):
+* Cuando se soluciona el problema, se deben mergear con **master** y
+  **develop** (o **release branch**, si existe):
 	* Además se debe crear un nuevo **tag en master** con un número de versión
     actualizado.
 
