@@ -135,7 +135,7 @@ metódicos.
     aplicarse.
 	* Si ya se han aplicado, entonces no hacer nada.
 * Si bien hay herramientas que manejan esto, el desarrollador debe evitar cambios destructivos y considerar siempre la necesidad de un rollback.
- 
+
 ---
 
 ### Versionado de la base de datos
