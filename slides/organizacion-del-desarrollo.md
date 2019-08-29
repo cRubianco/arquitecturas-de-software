@@ -36,6 +36,34 @@ mantener organizados algunos aspectos del desarrollo
 
 ---
 
+### Estándares de codificación: ejemplos
+
+Según una encuesta realizada por [stack overflow en 2019](https://insights.stackoverflow.com/survey/2019#most-popular-technologies),
+los lenguajes más populares son:
+
+* Javascript
+* Pyhon
+* Java
+* PHP
+
+---
+
+### Estándares de codificación: ejemplos
+
+* Javascript frameworks:
+	* [Angular](https://angular.io/guide/styleguide)
+	* [Vue.js](https://vuejs.org/v2/style-guide/)
+* Python
+	* [Django](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+* Java
+	* [Spring](https://github.com/spring-projects/spring-framework/wiki/Code-Style)
+* PHP
+	* [Laravel](https://laravel.com/docs/4.2/contributions#coding-style)
+	* [Symfony](https://symfony.com/doc/current/contributing/code/standards.html)
+	* [Slimframework](http://www.slimframework.com/docs/v3/contributors/guidelines.html)
+
+---
+
 ## Semántica del versionado
 
 El manejo de versiones es fundamental para manejar las dependencias y organizar
@@ -83,6 +111,16 @@ pre-releases, metadatos producto de compilaciones, etc.
 * **No es el caso de librerías**, donde es fundamental para los gestores de
   bundles determinar qué librería es la más adecuada. Así es el caso de `npm,
   bundler, pip, composer, etc`.
+
+---
+
+### Ejemplos de manejo de dependencias
+
+* [npm](https://semver.npmjs.com/)
+* [pip](https://pip.pypa.io/en/stable/reference/pip_install/#example-requirements-file)
+* [composer](https://getcomposer.org/doc/articles/versions.md)
+* [maven](https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html)
+* [gems](https://guides.rubygems.org/patterns/)
 
 ---
 
@@ -453,9 +491,8 @@ development starts are more productive, because there is less rework._
 * Se realizan pruebas de caja negra de forma automatizada.
 * Hay diferentes herramientas para implementarlos:
 	* [Selenium](https://www.seleniumhq.org/)
+	* [CodeceptJS](https://codecept.io/)
 	* [Cypress](https://www.cypress.io/)
-	* [Capybara](https://github.com/teamcapybara/capybara)
-	* [Robot Framework](http://robotframework.org/)
 
 ---
 
