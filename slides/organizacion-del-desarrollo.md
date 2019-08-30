@@ -42,7 +42,7 @@ Según una encuesta realizada por [stack overflow en 2019](https://insights.stac
 los lenguajes más populares son:
 
 * Javascript
-* Pyhon
+* Python
 * Java
 * PHP
 
