@@ -1,3 +1,20 @@
 .asciinema img {
 	height: 400px;
 }
+
+.img-left-ul-right p {
+  float: right;
+  width: 30%;
+  clear: none;
+}
+
+.img-left-ul-right ul {
+  float: left;
+  font-size: smaller;
+  width: 65%;
+}
+
+html.custom-background-opacity .slide-background {
+	opacity: 0.7 !important;
+}
+

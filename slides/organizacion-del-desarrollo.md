@@ -444,6 +444,77 @@ GitLab con sus flujos promociona sus pipelines de CD
 
 ---
 
+### Tests: ¿qué es el testing de aplicaciones?
+
+El testing de aplicaciones es el proceso de evaluar los elementos de la
+aplicación para detectar diferencias entre una entrada dada y una salida
+esperada.
+
+El testing evalúa la calidad del producto constantemente y por ello es un
+proceso que debe realizarse durante el proceso de desarrollo.
+
+En otras palabras el testing de aplicaciones es un proceso de verificación y
+validación.
+
+---
+
+## Tests: ¿qué es el TDD?
+
+TDD es una **evolución** del desarrollo que **promueve** la escritura de los
+test **antes** que el código que resuelve un problema. Es otra forma de pensar
+los requerimientos o diseñar antes de escribir código funcional.
+
+_Lo primero que debe comprenderse es que escribir código respetando TDD
+(disciplina) es un enfoque (un poco) diferente a simplemente zambullirse en la
+solución de un problema (sin un test)._
+
+---
+
+<!-- .slide: class="img-left-ul-right" -->
+## TDD: tres pasos
+
+![red Green Refactor](images/red-green-refactor.png)
+
+* **Escribir un test que falle:** entender el requerimiento lo suficiente para
+  escribir un test de lo que se espera. Como el código a testear aún no se
+escribió, el test fallará - _por ello será Red_.
+* **Hacer que el test pase:** escribir sólo el código necesario para hacer que
+  el test pase, mientras se asegure que además el resto de los tests pasan.
+* **Refactorizar el código escrito:** si se dispone de tiempo para emprolijar el
+  código escrito para simplificarlo (realzando la expresividad, eficienciam
+legibilidad) antes de finalizar el requerimiento, hacerlo.
+
+---
+
+<!-- .slide: data-background="./images/maquinas-expendedoras.jpg" data-state="custom-background-opacity" -->
+## TDD: Un ejemplo
+
+_**Analizaremos como trabajar con TDD implementando los tests y la funcionalidad
+para una máquina expendedora de golosinas. Nuestro problema será:**_
+
+# calcular el vuelto<!-- .element style="text-shadow: 0px 0px 13px #fff;" -->
+
+---
+
+## TDD: El ejemplo
+
+* Usaremos [QUnit](https://qunitjs.com/)
+* Para ello, emplearemos los css y js provistos desde CDNs
+* Los ejemplos seguirán la evolución de Red, Green, Refactor:
+	* [Introduciendo QUnit](./samples/tdd/00-presentacion-qunit): _ejemplo de
+	  uso._
+	* [Primer test](./samples/tdd/01-vuelto): _existe el test antes que el codigo. El estado es rojo._
+	* [Agregando casos](./samples/tdd/02-vuelto): _al agregar un nuevo test, de
+	  nuevo rojo._
+	* [Primer solución](./samples/tdd/03-vuelto): _solución horrible, pero verde_
+	* [Refactor](./samples/tdd/04-vuelto): _ejemplo refactorizado y completo_
+
+Para ver cómodamente los ejemplos puede abrir el siguiente [enlace en otra
+ventana](https://github.com/chrodriguez/arquitecturas-de-software/tree/master/samples/tdd)
+<!-- .element style="font-size: 60%" -->
+
+---
+
 ## Tests: BDD
 
 * Conjunto de prácticas que intentan reducir algunas actividades de desperdicio
