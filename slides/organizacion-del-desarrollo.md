@@ -221,7 +221,7 @@ trabajo grupal.
 * La rama **master** almacena la historia de versiones oficiales.
 * La rama **develop** sirve como rama de integración de *feature branches*.
 
-![Git Flow](images/git-flows/git-flow-01.svg)<!-- .element: height="300px" -->
+![Git Flow](images/git-flows/git-flow-01.svg)<!-- .element: height="400px" -->
 
 ---
 
@@ -243,7 +243,7 @@ trabajo grupal.
 
 ## Git Flow: Features branches
 
-![Git flow features](images/git-flows/git-flow-02.svg)
+![Git flow features](images/git-flows/git-flow-02.svg)<!-- .element: height="400px" -->
 
 ---
 
