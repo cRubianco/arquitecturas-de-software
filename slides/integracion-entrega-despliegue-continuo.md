@@ -94,7 +94,41 @@ prácticas de desarrollo, como de operaciones.
 Un proyecto que implemente [Twelve Factor apps](https://12factor.net/es/) aplica
 perfectamente.
 
-Una infraestructura basada en AWS, Azure, Docker Swarm, Cattle, Kubernetes, o
-incluso si se aplica IaC, también aplicaría si se siguen ciertos estándares.
+---
 
+## Despliegue continuo
 
+* Las formas de implementarlo pueden variar según el tipo de aplicación a
+desplegar y el servicio donde se aloje:
+  * **Sitios estáticos:** GitHub / Gitlab Pages, [Jekykll](https://jekyllrb.com/),
+    [Hugo](https://gohugo.io/), [Hexo](https://hexo.io/), etc.
+  * **Servidores con acceso ssh:** usando ssh directamente, o herramientas más
+    sofisticadas como [capistrano](https://capistranorb.com/) o [dpl](https://github.com/travis-ci/dp)
+  * **Proveedores de Cloud:** generalmente disponen de APIs que se utilizan con
+    herramientas provistas por ellos mismos que simplifican el despliegue.
+    Por ejemplo [Heroku](https://www.heroku.com/), Digital Ocean, AWS, Azure,
+    GCP, k8s, etc.
+
+---
+
+## Ejemplos
+
+* **[Integración continua en Gitlab](https://gitlab.com/chrodriguez/ci-test-php-example):** PHPUnit testing con php, MySQL y Postgres
+* **[Entrega continua en Gitlab](https://gitlab.com/chrodriguez/cd-artifact-sample-go/):**
+  Hello World en go que genera un binario cuando se crea un tag
+* **[Despliegue continuo en Gitlab pages](https://gitlab.com/chrodriguez/cd-jekyll-sample):** un sitio estático usando Jekyll
+	* [Ver sitio](https://chrodriguez.gitlab.io/cd-jekyll-sample)
+* **[Despliegue continuo en Github pages](https://github.com/chrodriguez/arquitecturas-de-software):** esta presentación usando [RevealJS](https://github.com/hakimel/reveal.js/)
+
+---
+
+## Más sobre Gitlab
+
+* [Documentación de Gitlab CI](https://docs.gitlab.com/ee/ci/)
+* [Ejemplos de Gitlab](https://docs.gitlab.com/ee/ci/examples/)
+* Conviene instalarse localmente gitlab-runner y probar los pipelines antes de
+  hacer push
+
+```
+gitlab-runner exec docker paso-a-ejecutar
+```
