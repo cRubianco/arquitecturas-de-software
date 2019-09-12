@@ -103,7 +103,7 @@ desplegar y el servicio donde se aloje:
   * **Sitios estáticos:** GitHub / Gitlab Pages, [Jekykll](https://jekyllrb.com/),
     [Hugo](https://gohugo.io/), [Hexo](https://hexo.io/), etc.
   * **Servidores con acceso ssh:** usando ssh directamente, o herramientas más
-    sofisticadas como [capistrano](https://capistranorb.com/) o [dpl](https://github.com/travis-ci/dp)
+    sofisticadas como [capistrano](https://capistranorb.com/) o [dpl](https://github.com/travis-ci/dpl)
   * **Proveedores de Cloud:** generalmente disponen de APIs que se utilizan con
     herramientas provistas por ellos mismos que simplifican el despliegue.
     Por ejemplo [Heroku](https://www.heroku.com/), Digital Ocean, AWS, Azure,
