@@ -1,3 +1,11 @@
+.reveal a {
+  color: #1c4a94;
+}
+
+.reveal a:hover {
+  color: blue;
+}
+
 .asciinema img {
 	height: 400px;
 }
