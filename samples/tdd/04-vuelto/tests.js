@@ -40,3 +40,13 @@ test('getChange(1, 1889) deberia dar 1888. La suma de todos las denominaciones  
   assert.deepEqual(result, [ 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1 ]);
 });
 
+/* 
+ * 500 - 50 = 450
+ * Se espera entonces [ 200, 200, 50]
+ */
+test('getChange(50, 500) deberia dar 450', 
+    function(assert) {
+  var result = getChange(50, 500);
+  assert.deepEqual(result, [ 200, 200, 50 ]);
+});
+
