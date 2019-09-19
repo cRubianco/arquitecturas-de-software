@@ -51,3 +51,12 @@ cuestión.
 * Healthchecks y auto-healing
 * Caching
 
+---
+
+## Escalando a partir del monitoreo
+
+El siguiente ejemplo, muestra como escalar una aplicación desplegada utilizando
+docker swarm basándose en la cantidad de peticiones que se sirven en una ventana
+de tiempo.
+
+El ejemplo puede verse en el [siguiente enlace](https://github.com/chrodriguez/swarm-autoscale-demo)
