@@ -16,7 +16,7 @@
 ## Agenda
 
 * Logs, estadísticas y monitoreo
-* Escalamiento
+* Escalabilidad
 * Twelve factor apps
 * Automatización
 * Docker
