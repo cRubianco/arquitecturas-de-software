@@ -204,13 +204,14 @@ Existen módulos para diferentes distribuciones. Por ejemplo, para instalar con
 apt, es posible utilizar el siguiente comando:
 
 ```
-ansible -m apt package=mosh node-01 --become
+ansible -b node-01 -m apt -a package=apache2
+
 ```
 
 Y luego para desinstalarlo:
 
 ```
-ansible -m apt "package=mosh state=absent" node-01 --become
+ansible -b node-01 -m apt -a "package=apache2 state=absent"
 ```
 
 ### Gestión de usuarios
