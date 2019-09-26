@@ -90,7 +90,7 @@ aplicación se instale en ellos.
 
 ![vagrant logo](./images/vagrant.png)<!-- .element: height="300px" style="border: none; box-shadow: none; background: none;" -->
 
-[Iniciar el taller](https://github.com/chrodriguez/arquitecturas-de-software/tree/master/talleres/vagranto)
+[Iniciar el taller](https://github.com/chrodriguez/arquitecturas-de-software/tree/master/talleres/vagrant)
 
 ---
 
