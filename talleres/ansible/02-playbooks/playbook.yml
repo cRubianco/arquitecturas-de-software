@@ -4,6 +4,10 @@
   - name: load os dependant variables
     include_vars:
       file: "{{ ansible_os_family }}.yml"
+  - name: updater packages cache if updated
+    apt:
+      cache_valid_time: 21600
+    when: ansible_os_family == 'Debian'
   - name: ensure apache is at the latest version
     package:
       name: "{{ apache_pkg }}"
