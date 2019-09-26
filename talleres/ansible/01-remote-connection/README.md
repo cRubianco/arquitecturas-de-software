@@ -204,9 +204,11 @@ Existen módulos para diferentes distribuciones. Por ejemplo, para instalar con
 apt, es posible utilizar el siguiente comando:
 
 ```
-ansible -b node-01 -m apt -a package=apache2
+ansible -b node-01 -m apt -a "package=apache2 cache_valid_time=21600"
 
 ```
+> La opción cache_valid_time forzará que se corra un apt update si pasaron más
+> de los segundos indicados
 
 Y luego para desinstalarlo:
 
