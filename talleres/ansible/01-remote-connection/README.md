@@ -41,21 +41,16 @@ dos grupos:
 * pares
 * impares
 
-Este archivo de inventario es posible generarlo dinámicamente a partir de un
-vagrant con más o menos nodos, usando el siguiente script, dentro del proyecto
-vagrant, y con las máquinas virtuales corriendo:
 
-```
-bash utils/vagrant-ssh-config-to-ansible > ansible/hosts (Luego examinarlo)
-```
+### Probando ansible
 
-### Cargar el virtualenv de ansible
+Para simplificar las pruebas desde windows, se crea una VM más llamada
+ansible-host con ansible ya instalado.
 
-Asumimos ya se instaló ansible de alguna de las formas explicadas en el apartado
-anterior, y en caso de utilizar ansible con virtualenv se haya cargado el mismo.
+Entonces entramos a esta nueva vm: `vagrant ssh ansible-host` y luego accedemos
+al directorio compartido: `cd /vagrant`. Ahora podemos comenzar con nuestras
+pruebas:
 
-Asegurar estar en directorio donde se encuentra el `Vagrantfile` y `ansible.cfg`
-para correr los siguientes comandos.
 
 ```
 ansible --version
@@ -65,7 +60,7 @@ Debería devolver en ese proyecto algo como los siguiente:
 
 ```
 ansible 2.8.4
-  config file = /.../talleres/ansible/01-remote-connection/ansible.cfg
+  config file = /vagrant/ansible.cfg
   configured module search path = ....
   ansible python module location = ....
   executable location = ....
@@ -148,8 +143,7 @@ del usuario de conexión. Vamos a comentar esta configuración editando el archi
 ```yaml
 all:
   vars:
-    ansible_ssh_host: 127.0.0.1
-#    ansible_ssh_user: vagrant
+    ansible_ssh_user: none
 ...
 ```
 
